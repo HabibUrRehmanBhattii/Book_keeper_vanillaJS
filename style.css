@@ -20,30 +20,24 @@ body {
 
 
 h1 {
-  color: whitesmoke;
+  color: white;
   padding: 20px;
   background: rgba(0, 0, 0, 0.5);
-  border-radius: var(--birder-radius);
+  border-radius: 50px;
   cursor: pointer;
   text-align: center;
   text-transform: uppercase;
   width: 275px;
-  margin: 10px auto;
+  margin: 20px auto 10px;
   user-select: none;
-  font-family: 'Aboreto', cursive, sans-serif;
 }
 
 h1:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-h1:active {
-  transform: scale(0.9);
-}
-
 /* Bookmarks */
-
 .container {
   display: flex;
   flex-direction: row;
@@ -51,15 +45,15 @@ h1:active {
 }
 
 .item {
-  background: rgba(33, 33, 33, 0.5);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: var(--border-radius);
   padding: 20px;
   margin: 10px;
 }
 
 .item:hover {
-  background: rgba(33, 33, 33, 0.7);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 a {
@@ -70,7 +64,7 @@ a {
 
 a:link,
 a:visited {
-  color: whitesmoke;
+  color: white;
   text-decoration: none;
 }
 
@@ -79,7 +73,7 @@ a:active {
   text-decoration: underline;
 }
 
-.fa-xmark {
+.fa-times {
   float: right;
   cursor: pointer;
   z-index: 2;
@@ -93,8 +87,8 @@ a:active {
 .name img {
   height: 20px;
   width: 20px;
-  margin-right: 5px;
   vertical-align: sub;
+  margin-right: 5px;
 }
 
 /* Modal */
@@ -110,12 +104,12 @@ a:active {
 
 .show-modal {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .modal {
-  background: white;
+  background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   max-width: 95%;
   width: 500px;
@@ -126,6 +120,7 @@ a:active {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -133,7 +128,7 @@ a:active {
 
 .close-icon {
   float: right;
-  color: whitesmoke;
+  color: white;
   font-size: 24px;
   position: relative;
   top: 13px;
@@ -143,8 +138,8 @@ a:active {
 
 .modal-header {
   background: var(--primary-color);
-  color: white;
-  padding: 10px;
+  color: #fff;
+  padding: 15px;
 }
 
 h3 {
@@ -156,18 +151,16 @@ h3 {
   background: whitesmoke;
 }
 
-
 /* Form */
-
 .form-group {
   height: 55px;
 }
 
 .form-input {
-  width: 97;
+  width: 97%;
   padding: 5px;
-  border: 2px solod var(--primary-color);
-  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
   display: block;
   outline: none;
 }
@@ -181,10 +174,10 @@ button {
   cursor: pointer;
   color: white;
   background: var(--primary-color);
+  border: none;
   height: 30px;
   width: 100px;
-  border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   margin-top: 10px;
 }
 
@@ -196,10 +189,9 @@ button:focus {
   outline: none;
 }
 
-/* Media quray */
-
-@media  screen and (max-width: 600px) {
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
   .container {
-    flex-direction: column ;
+    flex-direction: column;
   }
 }
